@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:th="http://www.thymeleaf.org">
+
+<body>
+    <section th:fragment="rodape" class="footer">
+        <footer id="rodape" class="footer">
+
+            <div id="pe" class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-5 col-md-12">
+                        <a href="#">Lorem Ipsum</a>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab quasi quibusdam ullam deleniti
+                            unde hicvoluptatem numquam.?</p>
+                    </div>
+
+                    <div class="col-lg-2 col-7">
+                        <h5>Links úteis</h5>
+                        <ul class="list-unstyled text-small">
+                            <li class="mb-1"><a th:href="@{/}" class="link-secondary text-decoration-none">Home</a></li>
+                            <li class="mb-1"><a href="#" class="link-secondary text-decoration-none">Ambientes</a></li>
+                            <li class="mb-1"><a href="#" class="link-secondary text-decoration-none">Categorias</a></li>
+                            <li class="mb-1"><a th:href="@{/destaques}" class="link-secondary text-decoration-none">Destaques</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-12 col-6">
+                        <h5>Institucional</h5>
+                        <ul class="list-unstyled text-small navbar-nav">
+                            <li class="mb-1"><a href="#" class="link-secondary text-decoration-none">Quem Somos</a></li>
+                            <li class="mb-1"><a href="#" class="link-secondary text-decoration-none">Frestes e Devoluções</a></li>
+                            <li class="mb-1"><a href="#" class="link-secondary text-decoration-none">Como comprar na loja</a></li>
+                            <li class="mb-1"><a href="#" class="link-secondary text-decoration-none">Perguntas Frequentes</a></li>
+
+                            <li class="mb-1 dropdown">
+                                <a class="dropdown-toggle link-secondary text-decoration-none" href="#" id="formaPagDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Formas de pagamento
+                                </a>
+
+                                <ul class="dropdown-menu" aria-labelledby="formaPagDropdown">
+                                    <li>
+                                      <a class="dropdown-item"><i class="fa fa-credit-card-alt"></i> Cartões</a>
+                                      <p class="text-secondary">Trabalhamos com as principais bandeiras de cartões, seja debito ou crédito, com parcelamento de até 10x Sem Juros</p>
+                                    </li>
+                                    <li>
+                                      <a class="dropdown-item" href="#"><i class="fa fa-barcode"></i> Boleto Bancário</a>
+                                      <p class="text-secondary">Trabalhamos ambém com boletos bancários, com parcelamento de até 10x Sem Juros</p>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 text-center text-md-start">
+                        <h5>Contato</h5>
+                        <p>
+                            Rua Lorem<br>
+                            Pato Branco<br>
+                            Paraná<br><br>
+                            <i class="fa fa-phone"></i>(46) 4002-8922<br>
+                            <i class="fa fa-whatsapp"></i>(46) 9 9111-2233<br>
+                            <i class="fa fa-envelope-o"></i>magicFalls@exemplo.com<br>
+                            <strong>CNPJ:</strong> 00.111.222/3333-44<br>
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+            <div id="copy" class="container-fluid text-dark">
+                <div class="text-center p-3">
+                    <div class="copyright">
+                        <strong><span>MagicFalls quadros direitos reservados</span></strong>.
+                    </div>
+                    <div class="credits">
+                        MagicFalls quadros <a href="#">MagicFalls</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </section>
+
+    
+    
+</body>
+</html>

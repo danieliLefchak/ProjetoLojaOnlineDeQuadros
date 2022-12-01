@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:th="http://www.thymeleaf.org">
+
+<head>
+</head>
+
+<body>
+    <section th:fragment="cabecalho">
+        <nav id="navCab" class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <div class="col-md-3 col-lg-2">
+                    <div>
+                      <a th:href="@{/}" class="text-decoration-none">
+                        <div>
+                            <img src="img/Pyon_lara_log_novo-cop.png" alt="logo" title="logo" id="logo"/>
+                        </div>
+                        <div class="name">
+                            <p>MagicFalls</p>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+
+                <div class="collapse navbar-collapse justify-content-center col-15 col-md-4 col-lg-2" id="info">
+                    <div>
+                      <ul class="navbar-nav">
+                          <li class="nav-item">
+                              <a class="nav-link active" th:href="@{/}">Home</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="ambDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Ambientes
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="ambDropdown">
+                                <li>
+                                  <a class="dropdown-item" th:href="@{/sala}">Sala</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" th:href="@{/salaJantar}">Sala de jantar</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" th:href="@{/quarto}">Quarto</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" th:href="@{/quartoGamer}">Quarto Gamer</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" th:href="@{/escritorio}">Escritório</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" th:href="@{/banheiro}">Banheiro</a>
+                                </li>
+                              </ul>
+                          </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="categDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Categorias
+                              </a>
+                              <ul class="dropdown-menu" aria-labelledby="categDropdown">
+                                <li>
+                                  <a class="dropdown-item" th:href="@{/telas}">Telas Decorativas</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" th:href="@{/quadros}">Quadros</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" th:href="@{/mascaras}">Mascaras</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" th:href="@{/pinturas}">Pinturas em telas</a>
+                                </li>
+                              </ul>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" th:href="@{/destaques}">Destaques</a>
+                          </li>
+                      </ul>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center dropdown">
+                    <a class="text-reset me-2 hidden-arrow" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown">
+                      <button type= "button" class= "btn btn-default btn-lg" >
+                        <i class="fa fa-user"></i>
+                      </button>
+                    </a>
+
+                    <ul class="dropdown-menu" aria-labelledby="userDropdown">
+                      <li>
+                        <a class="dropdown-item" th:href="@{/login}">Entrar</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" th:href="@{/cadastro}">Cadastre-se</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Configurações</a>
+                      </li>
+                    </ul>
+
+                    <a class="text-reset me-1" th:href="@{/adicCarrinho}" id="icCar" role="button">
+                      <button type= "button" class= "btn btn-lg" >
+                        <i class="fa fa-shopping-cart">
+                          <span id="qntProdCarrinho" class="badge rounded-pill badge-notification bg-danger" height="10" width="10">0</span>
+                        </i>
+                      </button>
+                    </a> 
+                </div>
+
+                <form class="col-9 col-md-4 col-lg-3">
+                  <div class="input-group">
+                    <input class="form-control" type="search" placeholder="Buscar">
+                    <a class="text-reset" href="#" role="button">
+                      <button type= "button" class= "btn btn-default btn-lg" >
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </a> 
+                  </div>
+                </form>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#info" aria-controls="info" aria-expanded="false" aria-label="Toggle navigation">
+                  <span><i id="bar" class="fa fa-bars"></i></span>
+                </button>
+            </div>
+        </nav>
+    </section>
+</body>
+</html>

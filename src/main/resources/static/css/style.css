@@ -1,0 +1,282 @@
+/*@import url('https://fonts.googleapis.com/css2? family= Noto+Sans:wght@300 & family= Roboto+Serif:ital,opsz,wght@0,8..144,200;0,8..144,400;1,8..144,500;1,8..144,600 &família= Trabalho+Sans:ital@1 & display=trocar');*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --laranjaLogo: #ff7f27;
+    --amareloLogo: #ffc70e;
+    --amareloNav: #f9fb6a;
+    --amareloRod: #f9fb6ac0;
+    --fundoAmb: #ffad76a7;
+    --fundogeral: #eaeaea;
+    --cardIniCategText: #d14600;
+    --msgsDeErro: #ff0000;
+    --boxErro: #890000;
+    --boxValido: #00b41840;
+    --corTxt: #eaeaeaa7;
+    --qntCor: #ced4da;
+    --cardTituloLet: #000000;
+    --modalFooterHeader: #fdb54a;
+    --modalBody: #fde54a83;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+h2{
+    margin: 0;
+}
+
+#navCab{
+    background-color: var(--amareloNav);
+}
+
+#pe{
+    background-color: var(--amareloRod);
+}
+
+#copy{
+    background-color: var(--amareloNav);
+}
+
+#logo{
+    height: 2.5rem;
+    padding-left: 1rem;
+}
+
+#cardCateg{
+    height: 90%;
+    width: 90%;
+    font-weight: 450;
+    font-size: 1.5rem;
+}
+
+#cardCateg a{
+    color: var(--cardIniCategText);
+}
+
+#cardCateg.row{
+    --bs-gutter-x: 0;
+}
+
+#amb a{
+    text-decoration: none;
+    color: var(--laranjaLogo);
+}
+
+#navPag ul{
+    margin: 0;
+}
+
+#btnCarrinho{
+    background-color: var(--fundoAmb); 
+}
+
+#quant{
+    width: 65px;
+    height: 38px;
+    border-radius: .3rem;
+    border: none;
+    border: 1px solid var(--qntCor);
+}
+
+#btnComp{
+    background-color: var(--laranjaLogo);
+    color: var(--fundogeral);
+}
+
+#btnSub{
+    background-color: var(--laranjaLogo);
+    color: var(--fundogeral);
+}
+
+#cardCategTxt{
+    background-color: var(--corTxt);
+}
+
+#cardBox h3{
+    margin: 0;
+}
+
+#cardFundo{
+    background-color: var(--fundogeral);
+    border-radius: 1rem;
+}
+
+#imgCategBord{
+    border-radius: 1rem;
+}
+
+#cardConf img{
+    width: 100%;
+}
+
+#cardConf a{
+    text-decoration: none;
+}
+
+#cardConf .let{
+    color: var(--cardTituloLet);
+}
+
+#descProd{
+    margin-top: 10rem;
+}
+
+#btnParc{
+    background-color: var(--amareloNav);
+    border-color: var(--cardIniCategText);
+    color: var(--cardIniCategText);
+}
+
+#btnCar{
+    background-color: var(--amareloLogo);
+    border-color: var(--cardIniCategText);
+    color: var(--cardIniCategText);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 550;
+    margin: 0;
+}
+
+.name{
+    font-weight: bold;
+    font-family: 'Roboto';
+    justify-content: center;
+    color: var(--laranjaLogo);
+}
+
+.btn .badge {
+    top: -11px;
+    left: -5px;
+}
+
+.badge {
+    padding: 0.25em 0.45em;
+    font-size: .55em;
+}
+
+.bg{
+    background-color: var(--fundoAmb);
+}
+
+.content-depositions{
+    display: flex;
+    align-items: flex-start;
+}
+
+.imgGroup{
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgCol{
+    margin: .1rem;
+    justify-items: center;
+    cursor: pointer;
+}
+
+.imgProdTroc{
+    height: 150px; 
+    width: 150px;
+}
+
+@media screen and (min-width: 990px) and (max-width: 1493px){
+    .imgProdTroc{
+        height: 100px; 
+        width: 100px;
+    }
+}
+
+.ambiente img {
+    max-width: 50%;
+}
+  
+.ambiente{
+    text-align: center;
+}
+
+.bgTodo{
+    background-color: var(--fundogeral);
+}
+
+.text-cor{
+    color: var(--laranjaLogo);
+}
+
+.modal-header, .modal-footer{
+    border-color: var(--modalFooterHeader);
+    border-width: 2px;
+}
+
+.modal-footer button{
+    background-color: var(--cardIniCategText);
+}
+
+.modal-body{
+    background-color: var(--modalBody);
+}
+
+.table-bordered{
+    border-color: var(--cardIniCategText);
+}
+
+.erroCampos span {
+    color: var(--msgsDeErro);
+}
+
+.form .erroBox {
+    border: 1px solid var(--boxErro);
+}
+
+.erroBox:focus {
+    box-shadow: 0 0 0 0.2rem var(--boxErro);
+}
+
+.validoBox:focus {
+    box-shadow: 0 0 0 0.2rem var(--boxValido);
+}
+
+.erro{
+    color: var(--msgsDeErro);
+}
+
+#valFrete input[type="radio"]{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #ffff;
+    border: solid 1px var(--laranjaLogo);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#valFrete input[type="radio"]::before{
+    content: '';
+    background-color:var(--laranjaLogo);
+    border-radius: 50%;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+}
+
+#valFrete input[type="radio"]:checked::before{
+    opacity: 100%;
+}
+
+#valFrete input[type="radio"]:focus{
+    box-shadow: 0 0 5px #ababab;
+}
+
+

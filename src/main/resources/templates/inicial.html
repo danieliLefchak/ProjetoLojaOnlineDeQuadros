@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+layout:decorate="~{layout/layout-padrao}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Inicial</title>
+</head>
+<body>
+    <section layout:fragment="content">
+        <main>
+          <section id="Categorias">
+            <div class="text-center mb-2 title">
+              <h2>Categorias</h2>
+            </div>
+            <div class="container me-4">
+              <div id="cardCateg" class="row">
+
+                <div class="col-15 col-md-10 col-lg-6 mb-1">
+                  <a th:href="@{/telas}">
+                    <div id="cardFundo" class="card" data-aos="zoom-in" data-aos-easing="ease-in-back" data-aos-delay="100" data-aos-offset="0">
+                      <img src="img/quadro_sem.webp" class="card-img" alt="Telas" type="imgCat" id="imgCategBord"/>
+                      <div class="card-img-overlay">
+
+                        <div id="cardBox">
+                          <h3 id="cardCategTxt" class="card-title">Telas Decorativas</h3>
+                          <p id="cardCategTxt" class="card-text">
+                            Telas Decorativas para deixar o ambiente mais moderno e atrativo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-15 col-md-10 col-lg-6 mb-1">
+                  <a th:href="@{/quadros}">
+                    <div id="cardFundo" class="card" data-aos="zoom-in" data-aos-easing="ease-in-back" data-aos-delay="200" data-aos-offset="0">
+                    <img src="img/pintura-figura.webp"  class="card-img" alt="Quadros" type="imgCat" id="imgCategBord"/>
+                      <div class="card-img-overlay">
+
+                        <div id="cardBox">
+                          <h3 id="cardCategTxt" class="card-title">Quadros</h3>
+                          <p id="cardCategTxt" class="card-text">
+                            Quadros para deixar o ambiente mais moderno e atrativo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-15 col-md-10 col-lg-6 mb-1">
+                  <a th:href="@{/mascaras}">
+                    <div id="cardFundo" class="card" data-aos="zoom-in" data-aos-easing="ease-in-back"  data-aos-delay="300" data-aos-offset="0">
+                      <img src="img/masc.webp"  class="card-img" alt="Mascaras" type="imgCat" id="imgCategBord"/>
+                      <div class="card-img-overlay">
+
+                        <div id="cardBox">
+                          <h3 id="cardCategTxt" class="card-title">Mascaras</h3>
+                          <p id="cardCategTxt" class="card-text">
+                            Mascaras para deixar o ambiente mais descontraido
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-15 col-md-10 col-lg-6 mb-1">
+                  <a th:href="@{/pinturas}">
+                    <div id="cardFundo" class="card" data-aos="zoom-in" data-aos-easing="ease-in-back" data-aos-delay="400" data-aos-offset="0">
+                      <img src="img/shopping.webp"  class="card-img" alt="Pinturas" type="imgCat" id="imgCategBord"/>
+                      <div class="card-img-overlay">
+
+                        <div id="cardBox">
+                          <h3 id="cardCategTxt" class="card-title">Pinturas</h3>
+                          <p id="cardCategTxt" class="card-text">
+                            Quadros para deixar o ambiente mais agradavel e atrativo
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </section>
+
+          <section id="amb">
+            <div class="text-center mb-2 title">
+              <h2>Ambientes</h2>
+            </div>
+
+            <div class="container-fluid bg mt-2 mb-2">
+              <div class="row">
+
+                <div class="col-sm-2 mt-2 mb-2" data-aos="zoom-in-up">
+                    <div class="content-depositions">
+                      <div class="ambiente">
+                        <a th:href="@{/sala}">
+                          <img src="img/sala.webp" alt="amb" type="amb" class="rounded-circle">
+                          <h4>Sala</h4>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-2 mt-2 mb-2" data-aos="zoom-in-up">
+                  <div class="content-depositions">
+                    <div class="ambiente">
+                      <a th:href="@{/salaJantar}">
+                        <img src="img/salaJantar.webp" alt="amb" type="amb" class="rounded-circle">
+                        <h4>Sala de Jantar</h4>
+                      </a>
+                    </div>
+                  </div>
+                </div> 
+
+                <div class="col-sm-2 mt-2 mb-2" data-aos="zoom-in-up">
+                  <div class="content-depositions">
+                    <div class="ambiente">
+                      <a th:href="@{/quarto}">
+                        <img src="img/quart.webp" alt="amb" type="amb" class="rounded-circle">
+                        <h4>Quarto</h4>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-2 mt-2 mb-2" data-aos="zoom-in-up">
+                  <div class="content-depositions">
+                    <div class="ambiente">
+                      <a th:href="@{/quartoGamer}">
+                        <img src="img/quartGamer.webp" alt="amb" type="amb" class="rounded-circle">
+                        <h4>Quarto Gamer</h4>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-2 mt-2 mb-2" data-aos="zoom-in-up">
+                  <div class="content-depositions">
+                    <div class="ambiente">
+                      <a th:href="@{/escritorio}">
+                        <img src="img/escrit.webp" alt="amb" type="amb" class="rounded-circle">
+                        <h4>Escritório</h4>
+                      </a> 
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-2 mt-2 mb-2" data-aos="zoom-in-up">
+                  <div class="content-depositions">
+                    <div class="ambiente">
+                      <a th:href="@{/banheiro}">
+                        <img src="img/banban.jpg" alt="amb" type="amb" class="rounded-circle">
+                        <h4>Banheiro</h4>
+                      </a>
+                    </div>
+                  </div>
+                </div> 
+
+              </div>
+            </div>
+
+          </section>
+
+          <section id="destaques">
+            <div class="text-center title">
+              <h2>Destaques</h2>
+            </div>
+             
+            <div id="carroContai" class="container-fluid mt-2">
+              <div class="row">
+
+                <div id="cardConf" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+                  <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                      <div class="row justify-content-center">
+  
+                        <div class="col-sm col-10 col-md-3 col-lg-3 mb-4" id="Cardprod">
+                          <a th:href="@{/produto1}">
+                            <div class="card text-center">
+                              <img src="img/salaJantar.webp" alt="destIni" type="destIni" id="imgProdutos">
+
+                              <div class="card-body">
+                                <h4 class="let">Tela Decorativa para sala de jantar</h4>
+                                <p class="text-center let">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="text-cor">R$119,00</h4>
+                                <p class="text-secondary">Em até 10x no cartão ou até 5x no boleto bancário</p>
+                                
+                              </div>
+                            </div>
+                          </a>
+                          
+                        </div>
+
+                        <div class="col-sm col-10 col-md-3 col-lg-3 mb-4" id="Cardprod">
+                          <a th:href="@{/produto2}">
+                            <div class="card text-center">
+                              <img src="img/gamer.jpg" alt="destIni" type="destIni" id="imgProdutos">
+
+                              <div class="card-body">
+                                <h4 class="let">Quadro decorativo para quarto gamer</h4>
+                                <p class="text-center let">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="text-cor">R$56,00</h4>
+                                <p class="text-secondary">Em até 10x no cartão ou até 5x no boleto bancário</p>
+                                
+                              </div>
+                            </div>
+                          </a>
+                          
+                        </div>
+  
+                        <div class="col-sm col-10 col-md-3 col-lg-3 mb-4" id="Cardprod">
+                          <a th:href="@{/produto1}">
+                            <div class="card text-center">
+                              <img src="img/banban.jpg" alt="destIni" type="destIni" id="imgProdutos">
+
+                              <div class="card-body">
+                                <h4 class="let">Telas Decorativas para banheiros</h4>
+                                <p class="text-center let">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="text-cor">R$75,00</h4>
+                                <p class="text-secondary">Em até 10x no cartão ou até 5x no boleto bancário</p>
+                                
+                              </div>
+                            </div>
+                          </a>
+                          
+                        </div>
+
+                        <div class="col-sm col-10 col-md-3 col-lg-3 mb-4" id="Cardprod">
+                          <a th:href="@{/produto2}">
+                            <div class="card text-center">
+                              <img src="img/SalaQuad.webp" alt="destIni" type="destIni" id="imgProdutos">
+
+                              <div class="card-body">
+                                <h4 class="let">Quadro Decorativo para sala</h4>
+                                <p class="text-center let">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="text-cor">R$85,00</h4>
+                                <p class="text-secondary">Em até 10x no cartão ou até 5x no boleto bancário</p>
+                                
+                              </div>
+                            </div>
+                          </a>
+                          
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="carousel-item">
+                      <div class="row justify-content-center">
+
+                        <div class="col-sm col-10 col-md-3 col-lg-3 mb-4" id="Cardprod">
+                          <a th:href="@{/produto2}">
+                            <div class="card text-center">
+                              <img src="img/escrit.webp" alt="destIni" type="destIni" id="imgProdutos">
+
+                              <div class="card-body">
+                                <h4 class="let">Quadro decorativo para escritório</h4>
+                                <p class="text-center let">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="text-cor">R$72,00</h4>
+                                <p class="text-secondary">Em até 10x no cartão ou até 5x no boleto bancário</p>
+                                
+                              </div>
+                            </div>
+                          </a>
+                          
+                        </div>
+
+                        <div class="col-sm col-10 col-md-3 col-lg-3 mb-4" id="Cardprod">
+                          <a th:href="@{/produto2}">
+                            <div class="card text-center">
+                              <img src="img/gamer.jpg" alt="destIni" type="destIni" id="imgProdutos">
+
+                              <div class="card-body">
+                                <h4 class="let">Quadro decorativo para quarto gamer</h4>
+                                <p class="text-center let">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="text-cor">R$58,00</h4>
+                                <p class="text-secondary">Em até 10x no cartão ou até 5x no boleto bancário</p>
+                              
+                              </div>
+                            </div>
+                          </a>
+                          
+                        </div>
+
+                        <div class="col-sm col-10 col-md-3 col-lg-3 mb-4" id="Cardprod">
+                          <a th:href="@{/produto1}">
+                            <div class="card text-center">
+                              <img src="img/salaJantar.webp" alt="destIni" type="destIni" id="imgProdutos">
+
+                              <div class="card-body">
+                                <h4 class="let">Tela Decorativa para sala de jantar</h4>
+                                <p class="text-center let">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="text-cor">R$92,00</h4>
+                                <p class="text-secondary">Em até 10x no cartão ou até 5x no boleto bancário</p>
+                                
+                              </div>
+                            </div>
+                          </a>
+                          
+                        </div>
+
+                        <div class="col-sm col-10 col-md-3 col-lg-3 mb-4" id="Cardprod">
+                          <a th:href="@{/produto2}">
+                            <div class="card text-center">
+                              <img src="img/banban.jpg" alt="destIni" type="destIni" id="imgProdutos">
+
+                              <div class="card-body">
+                                <h4 class="let">Telas Decorativas para banheiros</h4>
+                                <p class="text-center let">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="text-cor">R$61,00</h4>
+                                <p class="text-secondary">Em até 10x no cartão ou até 5x no boleto bancário</p>
+                                
+                              </div>
+                            </div>
+                          </a>
+                          
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="carousel-item">
+                      <div class="row justify-content-center">
+
+                        <div class="col-sm col-10 col-md-3 col-lg-3 mb-4" id="Cardprod">
+                          <a th:href="@{/produto2}">
+                            <div class="card text-center">
+                              <img src="img/gamer.jpg" alt="destIni" type="destIni" id="imgProdutos">
+
+                              <div class="card-body">
+                                <h4 class="let">Quadro decorativo para quarto gamer</h4>
+                                <p class="text-center let">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="text-cor">R$73,00</h4>
+                                <p class="text-secondary">Em até 10x no cartão ou até 5x no boleto bancário</p>
+                                
+                              </div>
+                            </div>
+                          </a>
+                          
+                        </div>
+
+                        <div class="col-sm col-10 col-md-3 col-lg-3 mb-4" id="Cardprod">
+                          <a th:href="@{/produto2}">
+                            <div class="card text-center">
+                              <img src="img/escrit.webp" alt="destIni" type="destIni" id="imgProdutos">
+                              
+                              <div class="card-body">
+                                <h4 class="let">Quadro decorativo para escritório</h4>
+                                <p class="text-center let">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="text-cor">R$46,00</h4>
+                                <p class="text-secondary">Em até 10x no cartão ou até 5x no boleto bancário</p>
+                                
+                              </div>
+                            </div>
+                          </a>
+                          
+                        </div>
+
+                        <div class="col-sm col-10 col-md-3 col-lg-3 mb-4" id="Cardprod">
+                          <a th:href="@{/produto2}">
+                            <div class="card text-center">
+                              <img src="img/SalaQuad.webp" alt="destIni" type="destIni" id="imgProdutos">
+
+                              <div class="card-body">
+                                <h4 class="let">Quadro Decorativo para sala</h4>
+                                <p class="text-center let">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="text-cor">R$56,00</h4>
+                                <p class="text-secondary">Em até 10x no cartão ou até 5x no boleto bancário</p>
+                                
+                              </div>
+                            </div>
+                          </a>
+                          
+                        </div>
+  
+                        <div class="col-sm col-10 col-md-3 col-lg-3 mb-4" id="Cardprod">
+                          <a th:href="@{/produto2}">
+                            <div class="card text-center">
+                              <img src="img/salaJantar.webp" alt="destIni" type="destIni" id="imgProdutos">
+                              
+                              <div class="card-body">
+                                <h4 class="let">Tela Decorativa para sala de jantar</h4>
+                                <p class="text-center let">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                <h4 class="text-cor">R$120,00</h4>
+                                <p class="text-secondary">Em até 10x no cartão ou até 5x no boleto bancário</p>
+                                
+                              </div>
+                            </div>
+                          </a>
+                          
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#cardConf" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#cardConf" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+          </section>
+
+        </main>
+    </section>
+</body>
+</html>

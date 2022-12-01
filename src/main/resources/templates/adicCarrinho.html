@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt"  
+xmlns="http://www.w3.org/1999/xhtml"  
+xmlns:th="http://www.thymeleaf.org"  
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"  
+layout:decorate="~{layout/layout-padrao}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos Adicionados ao Carrinho</title>
+</head>
+<body>
+    <section layout:fragment="content">
+        <main>
+            <div class="container-fluid">
+                 <div class="row" id="prodCarrinho">
+                    <div class="col-lg-8 col-md-12 col-12 mt-3">
+                        <table id="tbProdCarrinho" class="table">
+                            <thead>
+                                <tr>
+                                    <td class="fw-bold"><h5>Carrinho</h5></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-12 col-md-10 col-lg-4 mt-3">
+                        <div id="resumCarrinho">
+                            
+                            <div class="card">
+                                <div class="card-header bg">
+                                    <h5 class="card-title">Resumo da compra</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul id="resumoDoCarrinho" class="resumo list-group list-group-flush list-unstyled">
+                                        <li>
+                                            <h6>Subtotal</h6>
+                                            R$ <label id="subtotal">0</label>
+                                        </li>
+                                        <li>
+                                            <h6>Desconto</h6>
+                                            R$ <label id="desc">0</label>
+                                        </li>
+                                        <li id="valFrete">
+                                            <h6>Frete</h6>
+                                            <div class="form-check">
+                                                <input  id="freteNorm" name="tipo" class="form-check-input" type="radio">
+                                                <label class="freteNorm form-check-label" for="freteNorm">
+                                                    Normal
+                                                </label>
+                                                    R$ <label id="valFreteNorm">0</label>
+                                                    <p>De 6 a 7 dias</p>
+                                            </div>
+                                            <div class="form-check">
+                                                <input id="freteExpr" name="tipo" class="form-check-input" type="radio">
+                                                <label class="freteExpr form-check-label" for="freteExpr">
+                                                    Expresso
+                                                </label>
+                                                    R$ <label id="valFreteExp">15</label>
+                                                    <p>De 8 a 9 dias</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <h6>Valor Total</h6>
+                                            R$ <label id="total">0</label>
+                                        </li>
+
+                                        <div class="d-flex justify-content-center mb-2 mt-3">
+                                            <a href="#" class="finalComp btn me-2 mt-1" id="btnCar">
+                                                Finalizar compra
+                                            </a>
+
+                                            <a th:href="@{/}" class="btn mt-1" id="btnComp">
+                                                Voltar as Compras
+                                                <i class="fa fa-cart-plus"></i>
+                                            </a>
+                                        </div>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </div> 
+
+                </div>
+            </div>
+        </main>
+
+        <script src="js/Carrinho.js"></script>
+    </section>
+</body>
+</html>

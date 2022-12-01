@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt"  
+xmlns="http://www.w3.org/1999/xhtml"  
+xmlns:th="http://www.thymeleaf.org"  
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"  
+layout:decorate="~{layout/layout-padrao}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto</title>
+</head>
+<body>
+    <section layout:fragment="content">
+        <main>
+            <div class="container-fluid">
+                <div class="row" id="Cardprod">
+                    <div class="col-lg-5 col-md-12 col-12 mt-3">
+
+                        <img class="img-fluid w-100" src="img/mascLumi2.webp" id="imgProdutos" alt="">
+
+                        <div class="imgGroup">
+                            <div class="imgCol">
+                                <img src="img/mascLumi2.webp" class="imgProdTroc" alt="">
+                            </div>
+                            <div class="imgCol">
+                                <img src="img/mascLumi3.webp" class="imgProdTroc" alt="">
+                            </div>
+                            <div class="imgCol">
+                                <img src="img/mascLumi4.webp" class="imgProdTroc" alt="">
+                            </div>
+                            <div class="imgCol">
+                                <img src="img/mascLumi.jpg" class="imgProdTroc" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-12 col-md-12 col-lg-6 mt-3">
+                        <h3 id="tituloCard">Mascara Decorativa para quarto</h3>
+                        <h2 id="preco" class="mt-4">60</h2>
+                        <p class="ms-2 text-secondary"><small>Sem o desconto:</small></p>
+                        <h4 id="precoSemDesc" class="ms-3 text-secondary"><s>75</s></h4>
+                        <p class="ms-2 text-secondary"><small>Em até 5x no cartão de crédito ou 3x no boleto bancario.</small></p>
+                        <div class="col-md-4 col-lg-4 mt-2">
+                            <div>
+                                <label for="Tamanho" class="col-form-label">Tamanho</label>
+                                <select name="tamQuad" id="tamQuad" class="form-select">
+                                    <option value="Pequeno">70x70</option>
+                                    <option value="Médio">80x80</option>
+                                    <option value="Grande">90x90</option>
+                                </select>
+
+                                <label for="pag" class="col-form-label">Formas de Pagamento</label>
+                                <select name="pag" id="pag" class="form-select">
+                                    <option value="CartãoAvista">Cartão de crédito a vista</option>
+                                    <option value="BoletoAvista">Boleto a vista</option>
+                                    <option value="CartãoAprazo">Cartão de crédito a prazo</option>
+                                    <option value="BoletoAprazo">Boleto a prazo</option>
+                                </select>
+                            </div>
+
+                            <div class="mt-1 mb-3">
+                                <label for="Quant" class="col-form-label">Quantidade</label>
+                                <div id="quantProd">
+                                    <input class="text-center" type="number" name="quant" id="quant" value="1">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 mb-2">
+                            <a href="#" class="btn me-2 mt-1" id="btnParc" data-bs-toggle="modal" data-bs-target="#modalTiposParcelas">
+                                Ver Parcelas
+                            </a>
+
+                            <a th:href="@{/adicCarrinho}" class="btnAdcCar btn me-2 mt-1" id="btnCar">
+                                Comprar agora
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
+
+                            <a href="#" class="btnAdcCar btn mt-1" id="btnComp">
+                                Adicionar ao carrinho
+                                <i class="fa fa-cart-plus"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="mt-3 mb-2">
+                            <h5>Descrições</h5>
+                            <p>- Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde sunt praesentium nisi. 
+                                <br>- Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, a iusto natus velit quod adipisci sed exercitationem quisquam.
+                            </p>
+                            <h6 class="mt-2">Mais informações</h6>
+                            <p>Devolução Grátis. Você tem 7 dias a partir da data de recebimento.</p>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4 col-lg-10 mt-2">
+                                <div class="card-header bg">
+                                    <h6 class="card-title">Calcular Frete</h6>
+                                </div>
+                                <div class="card-body">
+                                    <form action="">
+                                        <label for="">Informe o CEP do endereço de entrega para calcular o frete:</label>
+                                        <input type="text" id="cepProd" name="cepProd" class="form-control cep" placeholder="00000-000"/>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="modalTiposParcelas" tabindex="-1" aria-labelledby="modalTiposParcelas" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+
+                            <div class="modal-header">
+                              <h5 class="modal-title text-cor " id="modalTiposParcelas">Parcelas</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+
+                            <div class="modal-body">
+                              <h4>Cartão de crédito</h4>
+                              <p>- 2x no cartão de credito</p>
+                              <p>- 3x no cartão de credito</p>
+                              <p>- 6x no cartão de credito</p>
+                              <p>- 10x no cartão de credito</p>
+                              <h4>Boleto bancário</h4>
+                              <p>- 3x no boleto bancário</p>
+                              <p>- 6x no boleto bancário</p>
+                              <p>- 8x no boleto bancário</p>
+                              <p>- 15x no boleto bancário</p>
+                            </div>
+
+                            <div class="modal-footer">
+                              <button type="button" class="btn text-light" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                          </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <script src="js/produtos.js"></script>
+        <script src="js/imagens.js"></script>
+    </section>
+
+    
+</body>
+</html>
